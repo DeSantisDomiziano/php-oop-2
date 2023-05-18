@@ -1,6 +1,7 @@
 <?php 
 
 require_once __DIR__ . '/Models/Computer.php';
+require_once __DIR__ . '/Models/Desktop.php';
 require_once __DIR__ . '/Database/db.php';
 
 
@@ -28,18 +29,30 @@ require_once __DIR__ . '/Database/db.php';
   <main>
 
   <div class="container py-5">
-    <div class="row row-cols-3">
+    <div class="row row-cols-3 g-4">
+        <?php foreach($computers as $computer) : ?>
         <div class="col">
             <div class="card">
-                <img src="" alt="" class="card-img-top">
+                <img src="<?php echo $computer->img ?>" alt="" class="card-img-top">
                 <div class="card-body">
-
+                  <h2>
+                    <?php echo $computer->brand ?>
+                  </h2>
+                  <p>
+                    <?php echo $computer->keyboard ?> <br>
+                    <?php echo $computer->mouse ?>
+                  </p>
                 </div>
                 <div class="card-footer">
-                    
+                  <p class="m-0 text-end">
+                    <strong>
+                      <?php echo $computer->price . ' €' ?>
+                    </strong>
+                  </p>
                 </div>
             </div>
         </div>
+        <?php endforeach; ?>
     </div>
   </div>
 

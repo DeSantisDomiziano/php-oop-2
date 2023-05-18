@@ -3,14 +3,16 @@
 
  class Desktop extends Computer {
 
-    protected $brand;
-    protected $monitor;
-    protected $keyboard;
-    protected $price;
-    protected $mouse;
+    public $brand;
+    public $monitor;
+    public $keyboard;
+    public $price;
+    public $device;
+    public $img;
+    public $mouse;
 
-    public function __construct(string $_brand, string $_monitor, string $_keyboard, string $_mouse) {
-        parent::__construct($_brand, $_monitor, $_keyboard);
+    public function __construct(string $_brand, string $_monitor, string $_keyboard, string $_img, string $_mouse, float $_price) {
+        parent::__construct($_brand, $_monitor, $_keyboard, $_img, $_price);
         $this->mouse = $_mouse;
     }
 

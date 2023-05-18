@@ -2,16 +2,19 @@
 
 class Computer {
     
-    protected $brand;
-    protected $monitor;
-    protected $keyboard;
-    protected $price;
-    protected $device;
+    public $brand;
+    public $monitor;
+    public $keyboard;
+    public $price;
+    public $device;
+    public $img;
 
-    public function __construct(string $_brand, string $_monitor, string $_keyboard) {
+    public function __construct(string $_brand, string $_monitor, string $_keyboard, string $_img, float $_price) {
         $this->brand = $_brand;
         $this->monitor = $_monitor;
         $this->keyboard = $_keyboard;
+        $this->img = $_img;
+        $this->price = $_price;
     }
 
     public function setType()
@@ -19,9 +22,8 @@ class Computer {
         $this->device = 'Computer';
     }
 
-    public function setPrice(float $_price, string $_unit)
-    {
-        $this->price = $_price . " $_unit";
+    public function getType() {
+        return $this->device;
     }
 
 }
