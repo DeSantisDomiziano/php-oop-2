@@ -1,0 +1,3 @@
+<?php 
+
+$attay_computers = [];
