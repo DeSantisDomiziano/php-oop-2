@@ -2,9 +2,8 @@
 
 require_once __DIR__ . '/Models/Computer.php';
 require_once __DIR__ . '/Models/Desktop.php';
+require_once __DIR__ . '/Models/Laptop.php';
 require_once __DIR__ . '/Database/db.php';
-
-
 ?>
 
 <!doctype html>

@@ -9,15 +9,15 @@
     public $price;
     public $device;
     public $img;
-    public $mouse;
+    public $webcam;
 
-    public function __construct(string $_brand, string $_monitor, string $_keyboard, string $_img, string $_mouse, float $_price) {
+    public function __construct(string $_brand, string $_monitor, string $_keyboard, string $_img, string $_webcam, float $_price) {
         parent::__construct($_brand, $_monitor, $_keyboard, $_img, $_price);
-        $this->mouse = $_mouse;
+        $this->webcam = $_webcam;
     }
 
     public function setType()
     {
-        $this->device = 'Desktop';
+        $this->device = 'Laptop';
     }
  }
