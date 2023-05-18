@@ -31,6 +31,7 @@ require_once __DIR__ . '/Database/db.php';
   <div class="container py-5">
     <div class="row row-cols-3 g-4">
         <?php foreach($computers as $computer) : ?>
+          <?php $computer->setType() ?>
         <div class="col">
             <div class="card">
                 <img src="<?php echo $computer->img ?>" alt="" class="card-img-top">
@@ -44,6 +45,9 @@ require_once __DIR__ . '/Database/db.php';
                   </p>
                 </div>
                 <div class="card-footer">
+                  <p class="m-0 text-end">
+                  <?php echo $computer->device ?>
+                  </p>
                   <p class="m-0 text-end">
                     <strong>
                       <?php echo $computer->price . ' €' ?>
